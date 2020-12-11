@@ -24,6 +24,7 @@ jobs:
           cd Math-Explorer
           npm install
           npm run build
+          cd ..
       - name: Transfer data
         run: |
           rm -rf ./behrenle.github.io/mathexplorer
@@ -34,6 +35,7 @@ jobs:
           git config --local user.name "MATH_EXPLORER_UPDATER"
           git config --local user.email "behrenle@posteo.de"
           git commit -am "updated MathExplorer"
+          cd ..
       - name: Push changes to behrenle.github.io
         uses: ad-m/github-push-action@master
         with:
