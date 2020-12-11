@@ -20,8 +20,8 @@ jobs:
           cd Math-Explorer
           npm install
           npm run build
-          rm -rf ../behrenle.github.io/mathexplorer
-          cp mv ./build ../behrenle.github.io/mathexplorer
+          rm -rf ../behrenle.github.io/mathexplorer/*
+          cp ./build/* ../behrenle.github.io/mathexplorer/*
           cd ../behrenle.github.io
           git config user.name "MATHEXPLORER_UPDATER"
           git config user.email "behrenle@posteo.de"
