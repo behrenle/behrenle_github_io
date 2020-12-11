@@ -25,7 +25,7 @@ jobs:
           npm install
           npm run build
           rm -rf ../behrenle.github.io/mathexplorer/*
-          cp -r ./build ../behrenle.github.io/mathexplorer
+          mv ./build ../behrenle.github.io/mathexplorer
       - name: Update behrenle.github.io repository
         run: |
           cd ./behrenle.github.io
