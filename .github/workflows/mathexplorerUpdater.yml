@@ -12,6 +12,8 @@ jobs:
       - run: |
           git clone https://github.com/behrenle/Math-Explorer.git
           git clone https://github.com/behrenle/behrenle.github.io.git
+          echo node --version
+          echo npm --version
           cd Math-Explorer
           npm install
           npm run build
