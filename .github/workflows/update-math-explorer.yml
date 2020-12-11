@@ -1,4 +1,4 @@
-name: Update MathExplorer
+name: update-math-explorer
 
 on:
   - workflow_dispatch
