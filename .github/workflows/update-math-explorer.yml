@@ -24,8 +24,10 @@ jobs:
           cd Math-Explorer
           npm install
           npm run build
-          rm -rf ../behrenle.github.io/mathexplorer/*
-          mv ./build ../behrenle.github.io/mathexplorer
+      - name: Transfer data
+        run: |
+          rm -rf ./behrenle.github.io/mathexplorer
+          mv ./Math-Explorer/build ./behrenle.github.io/mathexplorer
       - name: Update behrenle.github.io repository
         run: |
           cd ./behrenle.github.io
