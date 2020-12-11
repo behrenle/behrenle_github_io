@@ -1,9 +1,12 @@
 name: update site
 
 on: workflow_dispatch
+env:
+  ACTIONS_RUNNER_DEBUG: true
 
 jobs:
   build:
+      
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-node@v2-beta
