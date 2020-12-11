@@ -2,7 +2,7 @@ name: update site
 
 on: workflow_dispatch
 env:
-  ACTIONS_RUNNER_DEBUG: true
+  CI: false
 
 jobs:
   build:
