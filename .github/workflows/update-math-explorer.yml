@@ -37,6 +37,7 @@ jobs:
           cd ./behrenle.github.io/mathexplorer
           git config --local user.name "MATH_EXPLORER_UPDATER"
           git config --local user.email "behrenle@posteo.de"
+          git add -A
           git commit -am "updated MathExplorer"
           
       - name: Push changes to behrenle.github.io
