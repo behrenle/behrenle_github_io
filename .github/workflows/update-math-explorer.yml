@@ -19,7 +19,6 @@ jobs:
         run: |
           git clone https://github.com/behrenle/Math-Explorer.git
           git clone https://github.com/behrenle/behrenle.github.io.git
-          echo $HOME
           
       - name: Build
         run: |
@@ -35,6 +34,7 @@ jobs:
           
       - name: Commit changes
         run: |
+          cd ./behrenle.github.io/mathexplorer
           git config --local user.name "MATH_EXPLORER_UPDATER"
           git config --local user.email "behrenle@posteo.de"
           git commit -am "updated MathExplorer"
