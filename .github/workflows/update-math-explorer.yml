@@ -15,17 +15,25 @@ jobs:
         with:
           node-version: '14'
       
-      - name: Build and commit updates
+      - name: Clone
         run: |
           git clone https://github.com/behrenle/Math-Explorer.git
           git clone https://github.com/behrenle/behrenle.github.io.git
+          
+      - name: Build
+        run: |
           cd Math-Explorer
           npm install
           npm run build
-          cd ..
-          rm -rf ./behrenle.github.io/mathexplorer
-          mv ./Math-Explorer/build ./behrenle.github.io/mathexplorer
+      
+      - name: Transfer Data
+        run: |
+          rm -rf $HOME/behrenle.github.io/mathexplorer
+          mv $HOME/Math-Explorer/build $HOME/behrenle.github.io/mathexplorer
           cd ./behrenle.github.io
+          
+      - name: Commit changes
+        run: |
           git config --local user.name "MATH_EXPLORER_UPDATER"
           git config --local user.email "behrenle@posteo.de"
           git commit -am "updated MathExplorer"
