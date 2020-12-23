@@ -5,6 +5,13 @@ object-assign
 */
 
 /*!
+ * Determine if an object is a Buffer
+ *
+ * @author   Feross Aboukhadijeh <https://feross.org>
+ * @license  MIT
+ */
+
+/*!
  * hotkeys-js v3.8.1
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies.
  * 
