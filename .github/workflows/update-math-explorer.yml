@@ -33,6 +33,8 @@ jobs:
           cd ./behrenle.github.io
           
       - name: Commit changes
+        env: 
+          PASTEBIN_API_KEY: ${{secrets.PASTEBIN_}} 
         run: |
           cd ./behrenle.github.io/mathexplorer
           git config --local user.name "MATH_EXPLORER_UPDATER"
