@@ -34,7 +34,8 @@ jobs:
           
       - name: Commit changes
         env: 
-          PASTEBIN_API_KEY: ${{secrets.PASTEBIN_API_KEY}} 
+          REACT_APP_JSON_BIN_API_KEY: ${{secrets.JSON_BIN_API_KEY}} 
+          REACT_APP_JSON_BIN_COLLECTION: ${{secrets.JSON_BIN_COLLECTION_ID}}
         run: |
           cd ./behrenle.github.io/mathexplorer
           git config --local user.name "MATH_EXPLORER_UPDATER"
