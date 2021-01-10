@@ -21,6 +21,9 @@ jobs:
           git clone https://github.com/behrenle/behrenle.github.io.git
           
       - name: Build
+        env: 
+          REACT_APP_JSON_BIN_API_KEY: ${{secrets.JSON_BIN_API_KEY}} 
+          REACT_APP_JSON_BIN_COLLECTION: ${{secrets.JSON_BIN_COLLECTION_ID}}
         run: |
           cd Math-Explorer
           npm install
@@ -33,9 +36,6 @@ jobs:
           cd ./behrenle.github.io
           
       - name: Commit changes
-        env: 
-          REACT_APP_JSON_BIN_API_KEY: ${{secrets.JSON_BIN_API_KEY}} 
-          REACT_APP_JSON_BIN_COLLECTION: ${{secrets.JSON_BIN_COLLECTION_ID}}
         run: |
           cd ./behrenle.github.io/mathexplorer
           git config --local user.name "MATH_EXPLORER_UPDATER"
